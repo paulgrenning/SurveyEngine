@@ -1,0 +1,10 @@
+<% if @survey.errors.any? %>
+  <div id="error_explanation">
+    <p>There were problems with the following fields:</p>
+    <ul>
+      <% @survey.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
