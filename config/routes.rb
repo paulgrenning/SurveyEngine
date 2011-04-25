@@ -1,5 +1,9 @@
 SurveyEngine::Application.routes.draw do
   match '/', :to => "surveys#new"
+  match '/survey-administration', :to => 'surveys#surveyadmin', :as => 'surveyadmin'
+  match '/survey-information', :to => 'surveys#surveyinfo', :as => 'surveyinfo'
+  match '/take-survey', :to => 'surveys#takesurvey', :as => 'takesurvey'
+  match '/survey-results', :to => 'surveys#surveyresults', :as => 'surveyresults'
   resources :surveys
 
 

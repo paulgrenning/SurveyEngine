@@ -1,20 +1,23 @@
-<div class="allSurveysArea">
-  <% @surveys.each do |survey| %>
-    <div> <%= survey.name %></div>
-  <% end %>
-</div>
+<div class="span-22 prepend-1 append-1">
+  <div class="allSurveysArea span-22">
+    <% @surveys.each do |survey| %>
+      <%= link_to survey.name, surveyinfo_path(:id => survey.id), {:class => 'span-7 mybutton-half'} %>
+    <% end %>
+  </div>
 
-<div class="submitArea">
-      
-<%= form_for(@survey) do |f| %>
+  <div class="divider span-22">
+  </div>
 
+  <div class="submitArea span-22">
+  <%= form_for(@survey) do |f| %>
     <%= render 'shared/error_messages' %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <div class="field">
+      <%= f.label "survey name" %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Create Survey", {:id => "submit-form"} %>
+    </div>
+  <% end %>
   </div>
-  <div class="actions">
-    <%= f.submit "Create Survey" %>
-  </div>
-<% end %>
 </div>

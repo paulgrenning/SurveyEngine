@@ -2,13 +2,22 @@
 <html>
 <head>
   <title>SurveyEngine</title>
+  <%= render "layouts/stylesheets" %>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "jquery-1.4.4.min" %>
+  <%= javascript_include_tag "jquery-ui" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+    <%= render "layouts/header", :locals => { :page_header => @page_header } %>
+    <div id="container">
+    <div id="main-content">
+      <%= yield %>
+    </div>
+    <div style="clear:both;"></div>
+      <%= render "layouts/footer" %>
+    </div>
+  </div>
 </body>
 </html>
