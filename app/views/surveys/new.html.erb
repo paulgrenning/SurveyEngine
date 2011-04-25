@@ -1,8 +1,17 @@
 <div class="span-22 prepend-1 append-1">
   <h2>Select Existing Survey</h2>
   <div class="allSurveysArea span-22">
+    <% counter = 0 %>
     <% @surveys.each do |survey| %>
-      <%= link_to survey.name, surveyinfo_path(:id => survey.id), {:class => 'span-7 mybutton-half'} %>
+      <% if(counter == 0) %>
+        <%= link_to survey.name, surveyinfo_path(:id => survey.id), {:class => 'span-7 mybutton-half myred'} %>
+      <% elsif(counter == 1) %>
+        <%= link_to survey.name, surveyinfo_path(:id => survey.id), {:class => 'span-7 mybutton-half myblue prepend-half'} %>
+      <% else %>
+        <%= link_to survey.name, surveyinfo_path(:id => survey.id), {:class => 'span-7 mybutton-half mygreen last prepend-half'} %>
+        <% counter = -1 %>
+      <% end %>
+      <% counter = counter + 1 %>
     <% end %>
   </div>
 

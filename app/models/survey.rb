@@ -4,6 +4,6 @@ class Survey < ActiveRecord::Base
   has_many :questions, :dependent => :destroy
 
   validates :name,  :presence => true,
-    :length   => { :maximum => 50 },
+    :length   => { :maximum => 60 },
     :uniqueness => true
 end

@@ -17,7 +17,7 @@ class SurveysController < ApplicationController
     @survey = Survey.new(params[:survey])
     @error = false
     if @survey.save
-      render 'new'
+      redirect_to '/'
     else
       @error = true
       render 'new'

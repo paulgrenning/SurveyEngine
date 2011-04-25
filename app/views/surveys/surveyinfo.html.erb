@@ -1,9 +1,13 @@
 <div class="span-22 prepend-1 append-1 survey-information">
-  <h2><%= @survey.name %> and the value <%= @survey.id %></h2>
-  <%= link_to "Take the survey?", takesurvey_path, {:class => 'span-7 mybutton-half'} %>
-  <%= link_to "View the survey results?", surveyresults_path, {:class => 'span-7 mybutton-half'} %>
-  <%= link_to "Edit the survey?", surveyadmin_path(:id => @survey.id), {:class => 'span-7 mybutton-half'} %>
+  <h2>Options For This Survey: <%= @survey.name %></h2>
+  <%= link_to "Take the survey?", takesurvey_path, {:class => 'span-7 mybutton-half myred'} %>
+  <%= link_to "View the survey results?", surveyresults_path, {:class => 'span-7 mybutton-half myblue prepend-half'} %>
+  <%= link_to "Edit the survey?", surveyadmin_path(:id => @survey.id), {:class => 'span-7 mybutton-half mygreen prepend-half last'} %>
+</div>
+<div class="prepend-1 span-22 append-1">
+  <div class="divider span-22">
+  </div>
 </div>
 <div id="forward-backward-area" class="span-22 prepend-1 append-1">
-  <%= link_to "Previous Page?", '/', {:class => 'span-4 mybutton-half'} %>
+  <%= link_to "Previous Page?", '/', {:class => 'span-4 mybutton-half myblack'} %>
 </div>

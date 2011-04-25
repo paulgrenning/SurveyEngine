@@ -56,7 +56,7 @@ body {
 }
 
 .submitArea {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 #submit-form {
@@ -69,6 +69,27 @@ body {
   text-align: center;
   font-size: 13px;
   margin-top: 6px;
+}
+
+.error-box {
+  background-color: #fff;
+  border: 3px solid #808080;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 386px;
+}
+
+.error-header {
+  font-size: 20px;
+  color: #fff;
+}
+
+.error-field {
+  margin-left: 150px;
 }
 
 .submitLabel {
@@ -99,8 +120,15 @@ body {
   background-color: #fff;
   border: 3px solid #808080;
   border-radius: 8px;
-  margin-right: 10px;
   font-size 18px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  margin-top: 20px;
+ height: 3px;
+ background-color: #fff;
+ border-bottom: 2px solid #999; 
 }
 
 a.mybutton-half {
@@ -110,7 +138,37 @@ a.mybutton-half {
   font-size: 18px;
 }
 
-a.mybutton-half:hover {
+.myred-error {
+  border-color: #9E0508;
+  background-color: #cc9999;
+}
+
+.myblue-error {
+  border-color: #006666;
+  background-color: #669999;
+}
+
+.mygreen-error {
+  border-color: #669900;
+  background-color: #99CC66;
+}
+
+a.myred:hover {
+  border-color: #9E0508;
+  background-color: #cc9999;
+}
+
+a.myblue:hover {
+  border-color: #006666;
+  background-color: #669999;
+}
+
+a.mygreen:hover {
+  border-color: #669900;
+  background-color: #99CC66;
+}
+
+a.myblack:hover {
   background-color: #000;
   border-color: #fff;
 }
@@ -202,7 +260,7 @@ a.mybutton-half:hover {
 }
 
 .prepend-half {
-  padding-left: 15px;
+  margin-left: 11px;
 }
 
 #header {
