@@ -1,4 +1,5 @@
 <div class="span-22 prepend-1 append-1">
+  <h2>Select Existing Survey</h2>
   <div class="allSurveysArea span-22">
     <% @surveys.each do |survey| %>
       <%= link_to survey.name, surveyinfo_path(:id => survey.id), {:class => 'span-7 mybutton-half'} %>
@@ -9,13 +10,14 @@
   </div>
 
   <div class="submitArea span-22">
+    <h2>Create New Survey</h2>
   <%= form_for(@survey) do |f| %>
     <%= render 'shared/error_messages' %>
     <div class="field">
-      <%= f.label "survey name" %><br />
-      <%= f.text_field :name %>
+      <h2 class="submitLabel">Survey Name:</h2>
+      <%= f.text_field :name, :class => "span-10 submitBox" %>
     </div>
-    <div class="actions">
+    <div class="actions span-5 last">
       <%= f.submit "Create Survey", {:id => "submit-form"} %>
     </div>
   <% end %>
