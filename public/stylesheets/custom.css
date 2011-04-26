@@ -33,11 +33,49 @@ h2 {
   font: normal normal normal 2em/normal Arial, Times, serif;
 }
 
+.resultRow {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.resultRowValue {
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  float: left;
+  border: 2px solid #fff;
+}
+
+.resultLegend {
+  margin-top: 10px;
+  border: 2px solid #fff;
+}
+
+.resultLegendVal {
+  float: left;
+  font-size: 16px;
+  color: #fff;
+  margin-left: 130px;
+}
+
+.resultRowText {
+  height: 35px;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 5px;
+}
+
 .questionnumber {
   height: 1.4em;
   color: #FFF;
   font: normal normal normal 1.5em/normal Arial, Times, serif;
   margin-top: 20px;
+}
+
+.verificationWarning {
+  width: 210px;
+  float: left;
+  margin-right: 20px;
 }
 
 .modificationWarning {
@@ -103,17 +141,27 @@ body {
 }
 
 .questionSpacer {
-  margin-bottom: 10px; 
+  color: #FFF;
+  font: normal normal normal 1.5em/normal Arial, Times, serif;
+  margin-top: 20px;
+}
+
+.radioButtonLabels {
+  margin-top: -20px;
+  margin-bottom: 5px;
 }
 
 .radioButtonLabel {
-  margin-bottom: 5px;
   margin-right: 38px;
   margin-left: 10px;
   font-size: 14px;
   color: #fff;
   width: 20px;
   float: left;
+}
+
+.radiobuttons {
+  margin-bottom: 10px;
 }
 
 .radiobutton {
@@ -226,6 +274,13 @@ body {
  border-bottom: 2px solid #999; 
 }
 
+.previousButtonSize {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
 a.mybutton-half {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -284,8 +339,15 @@ a.myblack:hover {
   border-color: #fff;
 }
 
+.myblack:hover {
+  background-color: #000;
+  border-color: #fff;
+  color: #fff;
+}
+
 #forward-backward-area {
   margin-top: 30px;
+  margin-bottom: -10px;
 }
 
 #body-interior {

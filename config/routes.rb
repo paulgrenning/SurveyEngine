@@ -10,6 +10,7 @@ SurveyEngine::Application.routes.draw do
   match '/update-question', :to => 'surveys#updatequestion', :as => 'updatequestion'
   match '/delete-question', :to => 'surveys#deletequestion', :as => 'deletequestion'
   match '/questionresults', :to => 'surveys#questionresults'
+  match '/saveresults', :to => 'surveys#saveresults', :as => 'saveresults'
   resources :surveys
 
 

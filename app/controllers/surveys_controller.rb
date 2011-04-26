@@ -1,15 +1,17 @@
 class SurveysController < ApplicationController
 
-  def questionresults
-    @survey = Survey.find(params[:questionresult][:sid])
+
+  def saveresults
+    @survey = Survey.find(params[:id])
+    @answersString = params[:answers].to_s
+    @answers = params[:answers].to_s.split('x')
     @questions = @survey.questions
-    paramsValues = params.values
-    @count = 2
     @questions.each do |question|
-      question.questionresults.new(paramsValues[:questionresult][@count]).save
-      @count = @count + 1
+      currentanswer = @answers.shift
+      currentanswer = currentanswer.to_i
+      question.questionresults.new(:answer => currentanswer).save
     end
-    redirect_to surveyresults_path(:id => [:questionresult][:sid])
+    redirect_to surveyresults_path(:id => params[:id])
   end
 
   def show
@@ -77,6 +79,29 @@ class SurveysController < ApplicationController
 
   def surveyresults
     @title = "Survey Results"
+    @survey = Survey.find(params[:id])
+    @questions = @survey.questions
+    @numQuestions = @questions.length
+    @hasQuestions = false
+    if(@numQuestions != 0)
+      @hasQuestions = true
+      @averageAnswers = Array.new(@numQuestions)
+      @total = 0
+      @count = 0
+      @hasResults = false
+      if(@questions[0].questionresults.length != 0)
+        @hasResults = true
+        @totalSubmissions = @questions[0].questionresults.length
+        @questions.each do |q|
+          @total = 0
+          q.questionresults.each do |r|
+            @total = @total + r.answer.to_i
+          end
+          @averageAnswers[@count] = @total/@totalSubmissions * 135
+          @count = @count + 1
+        end
+      end
+    end
   end
 
   def takesurvey

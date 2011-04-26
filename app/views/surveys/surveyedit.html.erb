@@ -30,6 +30,14 @@
   </div>
 </div>
 <div id="forward-backward-area" class="span-22 prepend-1 append-1">
-  <%= link_to "Previous Page?", surveyadmin_path(:id => @survey.id), {:class => 'span-4 mybutton-half myblack'} %>
-  <%= link_to "Main Page?", '/', {:class => 'span-4 mybutton-half myblack'} %>
+  <div class="span-4 mybutton-half myblack previousButtonSize" onclick="verifySelection()">Previous Page?</div> 
+  <div class="span-4 mybutton-half myblack previousButtonSize" onclick="verifySelection2()">Main Page?</div> 
+</div>
+<div  class="span-22 prepend-1 append-1">
+  <%= link_to "Leave Page?", surveyadmin_path(:id => @survey.id), {:class => 'mygreen-hover modificationWarning red questionnumber verificationWarning', :id => "hiddenYes"} %>
+  <div class="modificationWarning red questionnumber verificationWarning mygreen-hover" id="hiddenNo" onclick="hideVerification()">Stay Here?</div>
+</div>
+<div  class="span-22 prepend-1 append-1">
+  <%= link_to "Leave Page?", '/', {:class => 'mygreen-hover modificationWarning red questionnumber verificationWarning', :id => "hiddenYes2"} %>
+  <div class="modificationWarning red questionnumber verificationWarning mygreen-hover" id="hiddenNo2" onclick="hideVerification2()">Stay Here?</div>
 </div>

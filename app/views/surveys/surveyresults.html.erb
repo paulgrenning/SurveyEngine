@@ -1,0 +1,37 @@
+<div class="span-22 prepend-1 append-1">
+  <h2>Survey: <%= @survey.name %></h2>
+  <div class="span-22"></div>
+  <% if(@hasQuestions == false) %>
+    <h2>This survey has no questions</h2> 
+  <% elsif(@hasResults == false) %>
+    <h2>This survey has no submissions</h2> 
+  <% else %>
+    <h2>Survey has <%= @totalSubmissions.to_s %> submissions. The average answers are below.</h2>
+    <% questionCount = 0 %>
+    <% @averageAnswers.each do |val| %>
+      <% questionCount = questionCount + 1 %>
+      <div class="span-22 resultRow">
+        <div class="span-1 resultRowText">Q<%= questionCount %></div>
+        <div class="resultRowValue" style="background-color: #ffdd33; width: <%= val.to_s %>px;">
+        </div>
+      </div>
+    <% end %>
+    <div class="prepend-1 span-21">
+      <div class="resultLegend span-21">
+        <div class="resultLegendVal">1</div>
+        <div class="resultLegendVal">2</div>
+        <div class="resultLegendVal">3</div>
+        <div class="resultLegendVal">4</div>
+        <div class="resultLegendVal">5</div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="prepend-1 span-22 append-1">
+  <div class="divider span-22">
+  </div>
+</div>
+<div id="forward-backward-area" class="span-22 prepend-1 append-1">
+  <%= link_to "Main Page?", '/', {:class => 'span-4 mybutton-half myblack'} %>
+  <%= link_to "Survey Info Page?", surveyinfo_path(:id => @survey.id), {:class => 'span-4 mybutton-half myblack'} %>
+</div>

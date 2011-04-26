@@ -30,15 +30,24 @@ $(document).ready( function(){
 function submitSurveyJS(){
  var numQuestions = parseInt($("#numberOfQuestions").attr("value"));
  var retVal = true;
+ var selections = new Array();
  for(i = 0; i < numQuestions; i++){
    for(j = 1; j < 6; j++){
      if($("#radioset"+i+"index"+j).attr("selected") == "1"){
+       selections.push(j);
        break; 
      } else if(j == 5){
        retVal = false;
        $("#errorset"+i).fadeIn('slow', function (){}); 
      }
    }  
+ }
+ if(retVal == true){
+   var hrefVal = $("#submitSurveyAnswers").attr("href");
+   for(i = 0; i < numQuestions; i++){
+     hrefVal = hrefVal + selections[i] + "x";
+   } 
+   $("#submitSurveyAnswers").attr("href", hrefVal);
  }
  return retVal;
 }
