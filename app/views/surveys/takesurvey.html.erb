@@ -1,5 +1,6 @@
 <div class="span-22 prepend-1 append-1">
   <h2><%= @survey.name %></h2>
+  <h2>Value 1 is least favorable and 5 is most favorable.</h2>
   <% counter = 0 %>
     <% @questions.each do |question| %>
       <div class="span-22 questionSpacer"><p><%= (counter+1) %><%=". " %><%= question.content %></p></div>
