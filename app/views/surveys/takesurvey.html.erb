@@ -2,8 +2,8 @@
   <h2><%= @survey.name %></h2>
   <% counter = 0 %>
     <% @questions.each do |question| %>
-      <div class="span-22 questionnumber questionSpacer"><%= (counter+1) %>: <%= question.content %></div>
-      <div class="span-22 error-box hideError">Don't Forget To Answer This Question!</div>
+      <div class="span-22 questionnumber questionSpacer"><%= (counter+1) %>. <%= question.content %></div>
+      <div class="span-22 error-box hideError" id="errorset<%= counter %>">Don't Forget To Answer This Question!</div>
       <div class="span-22 radioButtonLabels">
         <div class="radioButtonLabel">1</div>
         <div class="radioButtonLabel">2</div>
@@ -20,10 +20,15 @@
       </div>
       <% counter = counter + 1 %>
     <% end %>
+    <div id="numberOfQuestions" value="<%= counter %>"></div>
     <div class="span-22 above-submit-survey">
-      <%= link_to "Submit Survey", surveyadmin_path(:id => @survey.id), {:class => 'span-4 mybutton-half mygreen-hover'} %>
+      <%= link_to "Submit Survey", surveyresults_path(:id => @survey.id), {:class => 'span-4 mybutton-half mygreen-hover', :onclick => "return submitSurveyJS()"} %>
     </div>
-    <div>
-    </div>
+  <div class="divider span-22">
+  </div>
+</div>
+<div id="forward-backward-area" class="span-22 prepend-1 append-1">
+  <%= link_to "Previous Page?", surveyinfo_path(:id => @survey.id), {:class => 'span-4 mybutton-half myblack'} %>
+  <%= link_to "Main Page?", '/', {:class => 'span-4 mybutton-half myblack'} %>
 </div>
 
