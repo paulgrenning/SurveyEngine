@@ -1,6 +1,5 @@
 <% if @survey.errors.any? %>
   <div id="error_explanation" >
-    <div class="error-field error-header">There were problems with the following fields:</div>
     <% @survey.errors.full_messages.each do |msg| %>
         <div class="error-box myred-error error-field"><%= msg %></div>
     <% end %>

@@ -1,6 +1,6 @@
 <div class="span-22 prepend-1 append-1">
   <h2>Manage This Survey: <%= @survey.name %></h2>
-  <%= link_to "Delete this survey?", delete_path(:id => @survey.id), {:class => 'span-7 mybutton-half myred'} %>
+  <%= link_to "Delete this survey?", delete_path(:id => @survey.id), {:class => 'span-7 mybutton-half myorange'} %>
   <%= link_to "Edit survey questions?", surveyedit_path(:id => @survey.id), {:class => 'span-7 mybutton-half myblue prepend-half'} %>
   <%= link_to "Create a new survey?", '/', {:class => 'span-7 mybutton-half mygreen prepend-half last'} %>
 </div>

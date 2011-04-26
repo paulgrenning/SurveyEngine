@@ -4,7 +4,7 @@
     <% counter = 0 %>
     <% @surveys.each do |survey| %>
       <% if(counter == 0) %>
-        <%= link_to survey.name, surveyinfo_path(:id => survey.id), {:class => 'span-7 mybutton-half myred'} %>
+        <%= link_to survey.name, surveyinfo_path(:id => survey.id), {:class => 'span-7 mybutton-half myorange'} %>
       <% elsif(counter == 1) %>
         <%= link_to survey.name, surveyinfo_path(:id => survey.id), {:class => 'span-7 mybutton-half myblue prepend-half'} %>
       <% else %>
@@ -22,6 +22,7 @@
   <div class="submitArea span-22">
     <h2>Create New Survey</h2>
   <%= form_for(@survey) do |f| %>
+    <%= render 'shared/error_messages'%>
     <div class="field">
       <h2 class="submitLabel">Survey Name:</h2>
       <%= f.text_field :name, :class => "span-10 submitBox" %>

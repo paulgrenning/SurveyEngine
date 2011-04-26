@@ -63,6 +63,10 @@ h3 {
   width: 100%;
 }
 
+.above-submit-survey {
+  margin-top: 30px;
+}
+
 body {
   background-color: #050505;
 }
@@ -75,6 +79,7 @@ body {
   background-color: #fff;
   border: 3px solid #808080;
   border-radius: 8px;
+  -moz-border-radius: 8px;
   margin-left: 20px;
   padding-bottom: 13px;
   text-align: center;
@@ -88,6 +93,7 @@ body {
   background-color: #fff;
   border: 3px solid #808080;
   border-radius: 8px;
+  -moz-border-radius: 8px;
   margin-left: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -96,16 +102,57 @@ body {
   margin-top: 6px;
 }
 
-.error-box {
+.questionSpacer {
+  margin-bottom: 10px; 
+}
+
+.radioButtonLabel {
+  margin-bottom: 5px;
+  margin-right: 38px;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #fff;
+  width: 20px;
+  float: left;
+}
+
+.radiobutton {
+  width: 20px;
+  height: 20px;
   background-color: #fff;
-  border: 3px solid #808080;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  margin-right: 40px;
+  float: left;
+  border: 4px solid #444;
+}
+
+.radiobuttonInner {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.hideError {
+  display: none;
+}
+
+.error-box {
+  background-color: #cc9999;
+  border: 3px solid #9E0508;
   border-radius: 8px;
+  -moz-border-radius: 8px;
   font-size: 16px;
   text-align: center;
   margin-top: 6px;
   padding-top: 10px;
   padding-bottom: 10px;
   width: 386px;
+  margin-bottom: 10px;
 }
 
 .error-header {
@@ -130,6 +177,7 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 8px;
+  -moz-border-radius: 8px;
   margin-left: 10px;
   margin-right: 10px;
   height: 40px;
@@ -146,6 +194,7 @@ body {
   padding-bottom: 10px;
   border: 3px solid #fff;
   border-radius: 8px;
+  -moz-border-radius: 8px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -165,6 +214,7 @@ body {
   background-color: #fff;
   border: 3px solid #808080;
   border-radius: 8px;
+  -moz-border-radius: 8px;
   font-size 18px;
   margin-bottom: 20px;
 }
@@ -188,6 +238,11 @@ a.mybutton-half {
   background-color: #cc9999;
 }
 
+.myorange-hover:hover {
+  border-color: #CF9020;
+  background-color: #DBBC5D;
+}
+
 .myred-hover:hover {
   border-color: #9E0508;
   background-color: #cc9999;
@@ -202,6 +257,11 @@ a.mybutton-half {
   border-color: #669900;
   background-color: #99CC66;
   color: #fff;
+}
+
+a.myorange:hover {
+  border-color: #CF9020;
+  background-color: #DBBC5D;
 }
 
 a.myred:hover {
@@ -302,6 +362,7 @@ a.myblack:hover {
   border: 3px solid #9E0508;
   background-color: #9E0508;
   border-radius: 6px;
+  -moz-border-radius: 6px;
   background-color: #cc9999;
 }
 

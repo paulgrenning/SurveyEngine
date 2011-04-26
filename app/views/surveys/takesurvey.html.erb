@@ -1,0 +1,29 @@
+<div class="span-22 prepend-1 append-1">
+  <h2><%= @survey.name %></h2>
+  <% counter = 0 %>
+    <% @questions.each do |question| %>
+      <div class="span-22 questionnumber questionSpacer"><%= (counter+1) %>: <%= question.content %></div>
+      <div class="span-22 error-box hideError">Don't Forget To Answer This Question!</div>
+      <div class="span-22 radioButtonLabels">
+        <div class="radioButtonLabel">1</div>
+        <div class="radioButtonLabel">2</div>
+        <div class="radioButtonLabel">3</div>
+        <div class="radioButtonLabel">4</div>
+        <div class="radioButtonLabel">5</div>
+      </div>
+      <div class="span-22 radiobuttons">
+        <div class="radiobutton" selected="0" set="<%= counter %>" id="radioset<%= counter %>index1"></div>
+        <div class="radiobutton" selected="0" set="<%= counter %>" id="radioset<%= counter %>index2"></div>
+        <div class="radiobutton" selected="0" set="<%= counter %>" id="radioset<%= counter %>index3"></div>
+        <div class="radiobutton" selected="0" set="<%= counter %>" id="radioset<%= counter %>index4"></div>
+        <div class="radiobutton" selected="0" set="<%= counter %>" id="radioset<%= counter %>index5"></div>
+      </div>
+      <% counter = counter + 1 %>
+    <% end %>
+    <div class="span-22 above-submit-survey">
+      <%= link_to "Submit Survey", surveyadmin_path(:id => @survey.id), {:class => 'span-4 mybutton-half mygreen-hover'} %>
+    </div>
+    <div>
+    </div>
+</div>
+

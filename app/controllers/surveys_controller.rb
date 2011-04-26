@@ -1,5 +1,17 @@
 class SurveysController < ApplicationController
 
+  def questionresults
+    @survey = Survey.find(params[:questionresult][:sid])
+    @questions = @survey.questions
+    paramsValues = params.values
+    @count = 2
+    @questions.each do |question|
+      question.questionresults.new(paramsValues[:questionresult][@count]).save
+      @count = @count + 1
+    end
+    redirect_to surveyresults_path(:id => [:questionresult][:sid])
+  end
+
   def show
     @title = "Surveys"
     @survey = Survey.find(0)
@@ -68,9 +80,10 @@ class SurveysController < ApplicationController
   end
 
   def takesurvey
-    @title = "Take Survey"
+    @title = "Taking A Survey"
     @survey = Survey.find(params[:id])
     @questions = @survey.questions
+    @questionresult = "" 
   end
 
 end

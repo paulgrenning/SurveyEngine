@@ -1,6 +1,6 @@
 <div class="span-22 prepend-1 append-1 survey-information">
   <h2>Options For This Survey: <%= @survey.name %></h2>
-  <%= link_to "Take the survey?", takesurvey_path, {:class => 'span-7 mybutton-half myred'} %>
+  <%= link_to "Take the survey?", takesurvey_path(:id => @survey.id), {:class => 'span-7 mybutton-half myorange'} %>
   <%= link_to "View the survey results?", surveyresults_path, {:class => 'span-7 mybutton-half myblue prepend-half'} %>
   <%= link_to "Edit the survey?", surveyadmin_path(:id => @survey.id), {:class => 'span-7 mybutton-half mygreen prepend-half last'} %>
 </div>
