@@ -34,10 +34,17 @@ h2 {
 }
 
 .questionnumber {
-  height: .8em;
+  height: 1.4em;
   color: #FFF;
   font: normal normal normal 1.5em/normal Arial, Times, serif;
   margin-top: 20px;
+}
+
+.modificationWarning {
+  width: 210px;
+  text-align: center;
+  height: 1.1em;
+  display:none;
 }
 
 h3 {
@@ -292,7 +299,10 @@ a.myblack:hover {
 }
 
 .red {
-  background-color: #0D0000;
+  border: 3px solid #9E0508;
+  background-color: #9E0508;
+  border-radius: 6px;
+  background-color: #cc9999;
 }
 
 .purple {
@@ -360,6 +370,7 @@ a.myblack:hover {
 }
 
 #copyright {
+  margin-top: 60px;
   text-align: center;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   color: #fff;

@@ -13,8 +13,7 @@ class SurveysController < ApplicationController
   end
 
   def updatequestion
-    @survey = Survey.find(params[:fake])
-    Question.find(params[:questionid]).update_attributes(:content => params[:questionValue])
+    Question.find(params[:questionid]).update_attributes(:content => params[:content])
     redirect_to  surveyedit_path(:id => params[:id])
   end
 
