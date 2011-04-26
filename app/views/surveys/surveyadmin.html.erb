@@ -1,8 +1,12 @@
 <div class="span-22 prepend-1 append-1">
   <h2>Manage This Survey: <%= @survey.name %></h2>
-  <%= link_to "Delete this survey?", delete_path(:id => @survey.id), {:class => 'span-7 mybutton-half myorange'} %>
+  <div class="span-7 mybutton-half myorange-hover" id="deleteSurveyButton" onclick="verifySelection()">Delete this survey?</div>
   <%= link_to "Edit survey questions?", surveyedit_path(:id => @survey.id), {:class => 'span-7 mybutton-half myblue prepend-half'} %>
   <%= link_to "Create a new survey?", '/', {:class => 'span-7 mybutton-half mygreen prepend-half last'} %>
+</div>
+<div  class="span-22 prepend-1 append-1">
+  <%= link_to "Delete Survey?", delete_path(:id => @survey.id), {:class => 'mygreen-hover modificationWarning red questionnumber verificationWarning', :id => "hiddenYes"} %>
+  <div class="modificationWarning red questionnumber verificationWarning mygreen-hover" id="hiddenNo" onclick="hideVerification()">Keep Survey?</div>
 </div>
 <div class="prepend-1 span-22 append-1">
   <div class="divider span-22">

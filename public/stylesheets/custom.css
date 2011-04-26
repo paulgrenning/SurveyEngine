@@ -281,6 +281,13 @@ body {
   font-size: 18px;
 }
 
+#deleteSurveyButton {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
 a.mybutton-half {
   padding-top: 10px;
   padding-bottom: 10px;
