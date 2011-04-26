@@ -6,4 +6,6 @@ class Question < ActiveRecord::Base
   has_many :questionresults, :dependent => :destroy
 
   validates :content, :presence => true
+
+  default_scope :order => 'questions.created_at ASC'
 end
