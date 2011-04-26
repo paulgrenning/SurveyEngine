@@ -69,6 +69,8 @@ class SurveysController < ApplicationController
 
   def takesurvey
     @title = "Take Survey"
+    @survey = Survey.find(params[:id])
+    @questions = @survey.questions
   end
 
 end
