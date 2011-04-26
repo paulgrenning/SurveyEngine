@@ -1,0 +1,25 @@
+<div class="span-22 prepend-1 append-1">
+  <h2><%= @survey.name %></h2>
+    <% counter = 0 %>
+    <% @questions.each do |question| %>
+      <h2 class="span-22 questionnumber">Question <%= (counter+1) %></h2>
+      <textarea method="post" id="questionValue" class="span-16 submitQuestion" ><%= question.content %></textArea>
+      <div class="actions span-5 last">
+        <%= link_to "Delete Question?", deletequestion_path(:id => @survey.id, :questionid => question.id), {:class => 'span-5 submit-form-no-hover myred-hover'} %>
+        <%= link_to "Update Question?", updatequestion_path(:id => @survey.id, :questionid => question.id), {:class => 'span-5 submit-form-no-hover myblue-hover'} %>
+      </div>
+      <% counter = counter + 1 %>
+    <% end %>
+    <div>
+      <h2 class="span-22 questionnumber">Soon To Be Added Question <%= (counter+1) %></h2>
+      <%= form_for(@question) do |f| %>
+        <%= f.text_area :content, :class => "span-16 submitQuestion" %>
+        <div>
+          <%= f.hidden_field :surveyid, :value => "#{@survey.id}" %>
+        </div>
+        <div class="actions span-5 last">
+          <%= f.submit "Add Question", {:class => "submit-form-no-hover mygreen-hover", :style => "width:176px; height:66px; padding-top: 0px; padding-bottom: 0px;"} %>
+        </div>
+      <% end %>
+    </div>
+</div>

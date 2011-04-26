@@ -10,6 +10,7 @@
       <% else %>
         <%= link_to survey.name, surveyinfo_path(:id => survey.id), {:class => 'span-7 mybutton-half mygreen last prepend-half'} %>
         <% counter = -1 %>
+        <div class="span-22"></div>
       <% end %>
       <% counter = counter + 1 %>
     <% end %>
@@ -21,7 +22,6 @@
   <div class="submitArea span-22">
     <h2>Create New Survey</h2>
   <%= form_for(@survey) do |f| %>
-    <%= render 'shared/error_messages' %>
     <div class="field">
       <h2 class="submitLabel">Survey Name:</h2>
       <%= f.text_field :name, :class => "span-10 submitBox" %>

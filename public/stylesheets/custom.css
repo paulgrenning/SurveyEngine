@@ -30,9 +30,14 @@ h1 {
 h2 {
   height: 1em;
   color: #FFF;
-  /*color: #2d5824; */
   font: normal normal normal 2em/normal Arial, Times, serif;
-/*  border-bottom: 1px solid #aaf6aa;*/
+}
+
+.questionnumber {
+  height: .8em;
+  color: #FFF;
+  font: normal normal normal 1.5em/normal Arial, Times, serif;
+  margin-top: 20px;
 }
 
 h3 {
@@ -57,6 +62,19 @@ body {
 
 .submitArea {
   margin-top: 30px;
+}
+
+.submit-form-no-hover {
+  background-color: #fff;
+  border: 3px solid #808080;
+  border-radius: 8px;
+  margin-left: 20px;
+  padding-bottom: 13px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 8px;
+  width: 170px;
+  height: 10px;
 }
 
 #submit-form {
@@ -100,6 +118,21 @@ body {
   float: left;
 }
 
+.submitQuestion {
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 40px;
+  border: 3px solid #999;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .submitBox {
   font-size: 14px;
   padding-top: 10px;
@@ -108,6 +141,11 @@ body {
   border-radius: 8px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+#submit-form-red:hover {
+  border-color: #9E0508;
+  background-color: #cc9999;
 }
 
 #submit-form:hover {
@@ -143,14 +181,20 @@ a.mybutton-half {
   background-color: #cc9999;
 }
 
-.myblue-error {
+.myred-hover:hover {
+  border-color: #9E0508;
+  background-color: #cc9999;
+}
+
+.myblue-hover:hover {
   border-color: #006666;
   background-color: #669999;
 }
 
-.mygreen-error {
+.mygreen-hover:hover {
   border-color: #669900;
   background-color: #99CC66;
+  color: #fff;
 }
 
 a.myred:hover {

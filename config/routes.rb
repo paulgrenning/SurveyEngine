@@ -4,6 +4,11 @@ SurveyEngine::Application.routes.draw do
   match '/survey-information', :to => 'surveys#surveyinfo', :as => 'surveyinfo'
   match '/take-survey', :to => 'surveys#takesurvey', :as => 'takesurvey'
   match '/survey-results', :to => 'surveys#surveyresults', :as => 'surveyresults'
+  match '/edit-survey', :to => 'surveys#surveyedit', :as => 'surveyedit'
+  match '/delete', :to => 'surveys#delete', :as => 'delete'
+  match '/questions', :to => 'surveys#questions'
+  match '/update-question', :to => 'surveys#updatequestion', :as => 'updatequestion'
+  match '/delete-question', :to => 'surveys#deletequestion', :as => 'deletequestion'
   resources :surveys
 
 
