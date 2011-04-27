@@ -97,7 +97,7 @@ class SurveysController < ApplicationController
           q.questionresults.each do |r|
             @total = @total + r.answer.to_i
           end
-          @averageAnswers[@count] = @total/@totalSubmissions * 135
+          @averageAnswers[@count] = (@total.to_f/@totalSubmissions.to_f).round * 135
           @count = @count + 1
         end
       end
