@@ -8,11 +8,12 @@
   <% else %>
     <h2>Survey has <%= @totalSubmissions.to_s %> submissions. The average answers are below.</h2>
     <% questionCount = 0 %>
+    <div id="totalRows" value="<%= @numQuestions %>"></div>
     <% @averageAnswers.each do |val| %>
       <% questionCount = questionCount + 1 %>
       <div class="span-22 resultRow">
         <div class="span-22 last"><p class="resultRowText">Q<%= questionCount %>: <%= @questions[questionCount-1].content %></p></div>
-        <div class="resultRowValue" style="background-color: #ffdd33; width: <%= val.to_s %>px;">
+        <div id="bar<%= questionCount %>" class="resultRowValue" style="background-color: #ffdd33;" value="<%= val.to_s %>">
           <p>Answered <%= @numberOfTimesAnswered[questionCount-1] %> Times</p>
         </div>
       </div>

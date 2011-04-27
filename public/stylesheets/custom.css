@@ -43,6 +43,7 @@ h2 {
   margin-bottom: 5px;
   float: left;
   border: 2px solid #fff;
+  width: 10px;
 }
 
 .resultRowValue p {
