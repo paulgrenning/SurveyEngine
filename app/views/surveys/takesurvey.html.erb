@@ -5,6 +5,7 @@
     <% @questions.each do |question| %>
       <div class="span-22 questionSpacer"><p><%= (counter+1) %><%=". " %><%= question.content %></p></div>
       <div class="span-22 error-box hideError" id="errorset<%= counter %>">Don't Forget To Answer This Question!</div>
+      <div class="questionSpacer span-22"></div>
       <div class="span-22 radioButtonLabels">
         <div class="radioButtonLabel">1</div>
         <div class="radioButtonLabel">2</div>
