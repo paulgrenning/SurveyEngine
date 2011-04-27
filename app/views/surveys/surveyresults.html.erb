@@ -7,6 +7,16 @@
     <h2>This survey has no submissions</h2> 
   <% else %>
     <h2>Survey has <%= @totalSubmissions.to_s %> submissions. The average answers are below.</h2>
+    <h2 class="resultRowText">Value 1 is least favorable and 5 is most favorable.</h2>
+    <div class="span-22" style="margin-bottom: 10px;">
+      <div class="resultLegend span-21">
+        <div class="resultLegendVal">1</div>
+        <div class="resultLegendVal">2</div>
+        <div class="resultLegendVal">3</div>
+        <div class="resultLegendVal">4</div>
+        <div class="resultLegendVal">5</div>
+      </div>
+    </div>
     <% questionCount = 0 %>
     <div id="totalRows" value="<%= @numQuestions %>"></div>
     <% @averageAnswers.each do |val| %>
