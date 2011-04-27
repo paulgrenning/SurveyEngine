@@ -43,7 +43,8 @@ function submitSurveyJS(){
    }  
  }
  if(retVal == true){
-   var hrefVal = $("#submitSurveyAnswers").attr("href");
+   var surveyId = $("#submitSurveyAnswers").attr("surveyid");
+   var hrefVal = "/saveresults?id="+surveyId+"&answers="; 
    for(i = 0; i < numQuestions; i++){
      hrefVal = hrefVal + selections[i] + "x";
    } 

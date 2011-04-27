@@ -24,7 +24,7 @@
     <% end %>
     <div id="numberOfQuestions" value="<%= counter %>"></div>
     <div class="span-22 above-submit-survey">
-      <%= link_to "Submit Survey", saveresults_path(:id => @survey.id, :answers => ""), {:class => 'span-4 mybutton-half mygreen-hover', :id => "submitSurveyAnswers", :onclick => "return submitSurveyJS()"} %>
+      <%= link_to "Submit Survey", saveresults_path(:id => @survey.id, :answers => ""), {:surveyid => @survey.id, :class => 'span-4 mybutton-half mygreen-hover', :id => "submitSurveyAnswers", :onclick => "return submitSurveyJS()"} %>
     </div>
   <div class="divider span-22">
   </div>
