@@ -86,6 +86,7 @@ class SurveysController < ApplicationController
     if(@numQuestions != 0)
       @hasQuestions = true
       @averageAnswers = Array.new(@numQuestions)
+      @numberOfTimesAnswered = Array.new(@numQuestions)
       @total = 0
       @count = 0
       @hasResults = false
@@ -97,7 +98,8 @@ class SurveysController < ApplicationController
           q.questionresults.each do |r|
             @total = @total + r.answer.to_i
           end
-          @averageAnswers[@count] = (@total.to_f/@totalSubmissions.to_f).round * 135
+          @averageAnswers[@count] = (@total.to_f/q.questionresults.length.to_f).round * 135
+          @numberOfTimesAnswered[@count] = q.questionresults.length
           @count = @count + 1
         end
       end

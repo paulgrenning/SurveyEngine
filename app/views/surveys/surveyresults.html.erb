@@ -11,12 +11,13 @@
     <% @averageAnswers.each do |val| %>
       <% questionCount = questionCount + 1 %>
       <div class="span-22 resultRow">
-        <div class="span-1 resultRowText">Q<%= questionCount %></div>
+        <div class="span-22 last"><p class="resultRowText">Q<%= questionCount %>: <%= @questions[questionCount-1].content %></p></div>
         <div class="resultRowValue" style="background-color: #ffdd33; width: <%= val.to_s %>px;">
+          <p>Answered <%= @numberOfTimesAnswered[questionCount-1] %> Times</p>
         </div>
       </div>
     <% end %>
-    <div class="prepend-1 span-21">
+    <div class="span-22">
       <div class="resultLegend span-21">
         <div class="resultLegendVal">1</div>
         <div class="resultLegendVal">2</div>

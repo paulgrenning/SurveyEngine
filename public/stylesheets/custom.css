@@ -34,16 +34,22 @@ h2 {
 }
 
 .resultRow {
-  height: 40px;
   margin-bottom: 10px;
+  float: left;
 }
 
 .resultRowValue {
   height: 30px;
-  margin-top: 5px;
   margin-bottom: 5px;
   float: left;
   border: 2px solid #fff;
+}
+
+.resultRowValue p {
+  color: #111;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .resultLegend {
@@ -59,10 +65,9 @@ h2 {
 }
 
 .resultRowText {
-  height: 35px;
   font-size: 16px;
   color: #fff;
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .questionnumber {
